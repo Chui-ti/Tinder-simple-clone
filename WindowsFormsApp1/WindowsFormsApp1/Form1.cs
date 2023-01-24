@@ -14,17 +14,22 @@ namespace WindowsFormsApp1
 	{
 		public Form1()
 		{
+			Program.f1 = this;
 			InitializeComponent();
 		}
-
+		settings f2;
+		pairs f3;
+		//Form1 f1;
 		private void label1_Click(object sender, EventArgs e)
 		{
 
 		}
 
-		private void button2_Click(object sender, EventArgs e)
+		private void button_pairs_Click(object sender, EventArgs e)
 		{
-
+			f3 = new pairs();
+			f3.Show();
+			this.Hide();
 		}
 
 		private void button4_Click(object sender, EventArgs e)
@@ -39,11 +44,21 @@ namespace WindowsFormsApp1
 
 		private void button3_MouseCaptureChanged(object sender, EventArgs e)
 		{
-this.button3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.heart;
+			this.button3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.heart;
 		}
 		private void button1_MouseCaptureChanged(object sender, EventArgs e)
 		{
 			this.button1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.close__1_ ;
 		}
-	}
+
+        private void button_setings_Click(object sender, EventArgs e)
+        {
+			f2 = new settings();
+			f2.Show();
+			this.Hide();
+			//if (f2.ShowDialog() == DialogResult.OK)
+				//this.Show();
+
+		}
+    }
 }
